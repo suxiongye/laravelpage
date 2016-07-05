@@ -66,4 +66,8 @@ class AlbumController extends Controller
             return redirect()->back()->withInput()->withErrors("update album faild!");
         }
     }
+
+    public function show($id){
+        return view('admin/album/show')->withAlbum(Album::with('hasManyPhotos')->find($id));
+    }
 }

@@ -17,9 +17,14 @@
 
 Route::auth();
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'AlbumController@index');
+Route::get('album/{id}', 'AlbumController@show');
 
 Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin'], function(){
     Route::get('/', 'HomeController@index');
+
+    Route::get('album/{id}', 'AlbumController@show');
+    Route::get('photo/{id}/create', 'PhotoController@create');
     Route::resource('album', 'AlbumController');
+    Route::resource('photo', 'PhotoController');
 });
