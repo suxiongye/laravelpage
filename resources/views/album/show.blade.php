@@ -14,17 +14,23 @@
                         @endif
                         <a href="{{ url('/') }}" class="btn btn-lg btn-primary">返回</a>
 
+                        <br>
                         @foreach ($album->hasManyPhotos as $photo)
-                            <hr>
-                            <div class="article">
+
+                            <div class="article" style="float: left;margin-left: 10%;text-align: center;">
                                 <h4>{{ $photo->name }}</h4>
 
                                 <div class="content">
-                                    <p>
-                                        <a href="{{$photo->url}}" target="_blank"><img src="{{$photo->url}}" alt="pic"/></a>
-                                    </p>
+
+                                    <div style="max-height: 300px; max-width: 300px;">
+                                        <a href="{{$photo->url}}" target="_blank"><img
+                                                    style="max-width: 100%; max-height: 100%;" src="{{$photo->url}}"
+                                                    alt="pic"/></a>
+                                    </div>
+
                                 </div>
                             </div>
+
                         @endforeach
 
                     </div>
