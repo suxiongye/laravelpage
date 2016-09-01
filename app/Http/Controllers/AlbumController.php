@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Album;
+use DB;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -21,6 +22,8 @@ class AlbumController extends Controller
     }
 
     public function getPhotosByAlbum($id){
-        return "ajax";
+        $photos = DB::table('photos')->where('album_id', $id)->get();
+
+        return $photos;
     }
 }

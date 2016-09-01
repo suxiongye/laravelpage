@@ -14,27 +14,54 @@
         $(document).ready(function () {
             $("#about_content").hide();
             $("#contact_content").hide();
+            $("#album_detail").hide();
+            $('#album_index').show();
+
 
             $("#about").click(function () {
                 $("#album_index").hide();
                 $('#contact_content').hide();
                 $("#about_content").show();
+                $("#album_detail").hide();
             });
 
             $("#contact").click(function () {
                 $("#album_index").hide();
                 $('#contact_content').show();
                 $("#about_content").hide();
+                $("#album_detail").hide();
             });
 
-            $("#album").mouseover(function () {
-                $("#album_index").show();
+            $("#album").click(function () {
+                $("#album_index").hide();
+                $("#album_detail").show();
                 $('#contact_content').hide();
                 $("#about_content").hide();
             });
 
             $("#album a").click(function () {
-                alert($(this).attr('href'));
+                var album_id = $(this).find('input').val();
+                $.ajax({
+                    type: "GET",  //提交方式
+                    dataType: "json",
+                    url: "{{url('album/ajax/')}}" + "/" + album_id,//路径
+                    success: function (result) {//返回数据根据结果进行相应的处理
+                        var str = "";
+                        $.each(result, function (i, item) {
+                            if(i%2 == 0)
+                            {
+                                str += "<tr><td> <img src='"+item.url+"' id='img_result'/></td>";
+                            }
+                            else{
+                                str += "<td> <img src='"+item.url+"' id='img_result'/></td></tr>";
+                            }
+                        });
+                        if(result.length%2 != 0){
+                            str += "</tr>";
+                        }
+                        window.document.getElementById("album_result").innerHTML = str;
+                    }
+                });
             });
         });
     </script>
@@ -67,6 +94,9 @@
         #img_index {
             max-width: 140px;
         }
+        #img_result {
+            max-width: 240px;
+        }
 
         .table tbody tr td {
             border: #FFFFFF;
@@ -75,6 +105,10 @@
         .table tbody tr td {
             text-align: center;
             vertical-align: middle;
+        }
+
+        h4 {
+            font-weight: bold;
         }
     </style>
 </head>
@@ -87,20 +121,18 @@
 <div id="content">
     <div id="content_left">
         <div style="margin: 30px 40px 30px ;list-style-type: none;font-family: 微软雅黑;">
-            <h4><b><a href="#" id="about">ABOUT</a></b></h4>
+            <h4><a href="#" id="about">ABOUT</a></h4>
 
-            <h4><b><a href="#" id="contact">CONTACT</a></b></h4>
+            <h4><a href="#" id="contact">CONTACT</a></h4>
         </div>
         <ul style="float: left;">
             @foreach ($albums as $album)
                 <li style="margin: 20px 0;list-style-type: none;">
                     <div class="title" id="album">
-                        <a href="{{ url('album/ajax/'.$album->id) }}" id="album_photo">
-                            <h4><b>{{ $album->name }}</h4>
+                        <a href="#" id="album_photo">
+                            <input type="hidden" value="{{$album->id}}"/>
+                            <h4>{{ $album->name }}</h4>
                         </a>
-                    </div>
-                    <div class="body">
-                        <p>{{ $album->describe }}</p>
                     </div>
                 </li>
             @endforeach
@@ -108,23 +140,23 @@
     </div>
     <div id="content_right">
         <div id="about_content">
-            <h4><b>ABOUT</b></h4>
+            <h4>ABOUT</h4>
 
-            <h4><b>练金泳，1994年出生于中国广东。</b></h4>
+            <h4>练金泳，1994年出生于中国广东。</h4>
 
-            <h4><b>Lian Jinyong, born in Guangdong, China, in 1994.</b></h4>
+            <h4>Lian Jinyong, born in Guangdong, China, in 1994.</h4>
 
-            <h4><b>Locate in paris.</b></h4>
+            <h4>Locate in paris.</b></h4>
         </div>
 
         <div id="contact_content">
-            <h4><b>CONTACT</b><br></h4>
+            <h4>CONTACT</h4>
 
-            <h4><b>E-mail: <a href="simone199997@hotmail.com">simone199997@hotmail.com</a></b></h4>
+            <h4>E-mail: <a href="simone199997@hotmail.com">simone199997@hotmail.com</a></h4>
 
-            <h4><b>facebook: <a href="https://www.facebook.com/">https://www.facebook.com/</a></b></h4>
+            <h4>facebook: <a href="https://www.facebook.com/">https://www.facebook.com/</a></h4>
 
-            <h4><b>Ins:<a href="https://www.instagram.com/ginlian/">https://www.instagram.com/ginlian/</a></b></h4>
+            <h4>Ins:<a href="https://www.instagram.com/ginlian/">https://www.instagram.com/ginlian/</a></h4>
         </div>
 
         <div id="album_index">
@@ -164,6 +196,14 @@
                         <h4>PHOTOGRAPHY 2012</h4>
                     </td>
                 </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="album_detail">
+            <table class="table">
+                <tbody id="album_result">
+
                 </tbody>
             </table>
         </div>
