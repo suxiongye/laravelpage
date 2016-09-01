@@ -108,23 +108,23 @@
             vertical-align: middle;
         }
 
-        h4 {
+        h5 {
             font-weight: bold;
         }
     </style>
 </head>
 <body>
 <div id="title" style="margin: 10px 35px;text-align: left;font-family: 微软雅黑;">
-    <h1><a href="{{url('/')}}">LIANJINYONG</a></h1>
+    <h2><a href="{{url('/')}}">LIANJINYONG</a></h2>
 </div>
 
 
 <div id="content">
     <div id="content_left">
         <div style="margin: 30px 40px 30px ;list-style-type: none;font-family: 微软雅黑;">
-            <h4><a href="#" id="about">ABOUT</a></h4>
+            <h5><a href="#" id="about">ABOUT</a></h5>
 
-            <h4><a href="#" id="contact">CONTACT</a></h4>
+            <h5><a href="#" id="contact">CONTACT</a></h5>
         </div>
         <ul style="float: left;">
             @foreach ($albums as $album)
@@ -132,7 +132,7 @@
                     <div class="title" id="album">
                         <a href="#" id="album_photo">
                             <input type="hidden" value="{{$album->id}}"/>
-                            <h4>{{ $album->name }}</h4>
+                            <h5>{{ $album->name }}</h5>
                         </a>
                     </div>
                 </li>
@@ -167,34 +167,34 @@
                     <td>
                         <img src="http://o9laew41e.bkt.clouddn.com/2016.jpg" id="img_index"/>
 
-                        <h4>PHOTOGRAPHY 2016</h4>
+                        <h5>PHOTOGRAPHY 2016</h5>
                     </td>
                     <td>
                         <img src="http://o9laew41e.bkt.clouddn.com/2015I.jpg" id="img_index"/>
 
-                        <h4>PHOTOGRAPHY 2015 I</h4>
+                        <h5>PHOTOGRAPHY 2015 I</h5>
                     </td>
                     <td>
                         <img src="http://o9laew41e.bkt.clouddn.com/2015II.jpg" id="img_index"/>
 
-                        <h4>PHOTOGRAPHY 2015 II</h4>
+                        <h5>PHOTOGRAPHY 2015 II</h5>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <img src="http://o9laew41e.bkt.clouddn.com/2014.jpg" id="img_index"/>
 
-                        <h4>PHOTOGRAPHY 2014</h4>
+                        <h5>PHOTOGRAPHY 2014</h5>
                     </td>
                     <td>
                         <img src="http://o9laew41e.bkt.clouddn.com/2013.jpg" id="img_index"/>
 
-                        <h4>PHOTOGRAPHY 2013</h4>
+                        <h5>PHOTOGRAPHY 2013</h5>
                     </td>
                     <td>
                         <img src="http://o9laew41e.bkt.clouddn.com/2012.jpg" id="img_index"/>
 
-                        <h4>PHOTOGRAPHY 2012</h4>
+                        <h5>PHOTOGRAPHY 2012</h5>
                     </td>
                 </tr>
                 </tbody>
