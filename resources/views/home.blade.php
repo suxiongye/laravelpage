@@ -78,12 +78,13 @@
         #content_left {
             width: 20%;
             float: left;
+            position: fixed;
         }
 
         #content_right {
             width: 80%;
             min-height: 200px;
-            float: left;
+            float: right;
             text-align: center;
         }
 
