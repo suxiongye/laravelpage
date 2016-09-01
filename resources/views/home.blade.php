@@ -109,7 +109,7 @@
         }
 
         h5 {
-            font-weight: bold;
+           
         }
     </style>
 </head>
