@@ -109,7 +109,7 @@
         }
 
         h5 {
-           
+
         }
     </style>
 </head>
@@ -167,34 +167,34 @@
                     <td>
                         <img src="http://o9laew41e.bkt.clouddn.com/2016.jpg" id="img_index"/>
 
-                        <h5>PHOTOGRAPHY 2016</h5>
+                        <h6>PHOTOGRAPHY 2016</h6>
                     </td>
                     <td>
                         <img src="http://o9laew41e.bkt.clouddn.com/2015I.jpg" id="img_index"/>
 
-                        <h5>PHOTOGRAPHY 2015 I</h5>
+                        <h6>PHOTOGRAPHY 2015 I</h6>
                     </td>
                     <td>
                         <img src="http://o9laew41e.bkt.clouddn.com/2015II.jpg" id="img_index"/>
 
-                        <h5>PHOTOGRAPHY 2015 II</h5>
+                        <h6>PHOTOGRAPHY 2015 II</h6>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <img src="http://o9laew41e.bkt.clouddn.com/2014.jpg" id="img_index"/>
 
-                        <h5>PHOTOGRAPHY 2014</h5>
+                        <h6>PHOTOGRAPHY 2014</h6>
                     </td>
                     <td>
                         <img src="http://o9laew41e.bkt.clouddn.com/2013.jpg" id="img_index"/>
 
-                        <h5>PHOTOGRAPHY 2013</h5>
+                        <h6>PHOTOGRAPHY 2013</h6>
                     </td>
                     <td>
                         <img src="http://o9laew41e.bkt.clouddn.com/2012.jpg" id="img_index"/>
 
-                        <h5>PHOTOGRAPHY 2012</h5>
+                        <h6>PHOTOGRAPHY 2012</h6>
                     </td>
                 </tr>
                 </tbody>
