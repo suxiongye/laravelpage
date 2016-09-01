@@ -19,4 +19,8 @@ class AlbumController extends Controller
     {
         return view('album/show')->withAlbum(Album::with('hasManyPhotos')->find($id));
     }
+
+    public function getPhotosByAlbum($id){
+        return "ajax";
+    }
 }
