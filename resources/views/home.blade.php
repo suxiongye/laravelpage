@@ -90,6 +90,11 @@
 
         #about_content {
             min-height: 200px;
+            margin-top: 150px;
+        }
+        #contact_content {
+            min-height: 200px;
+            margin-top: 150px;
         }
 
         #img_result {
@@ -145,7 +150,7 @@
 
             <h4>Lian Jinyong, born in Guangdong, China, in 1994.</h4>
 
-            <h4>Locate in paris.</b></h4>
+            <h4>Photographer of fine art and fashion locate in paris.</h4>
         </div>
 
         <div id="contact_content">
