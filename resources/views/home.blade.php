@@ -164,7 +164,7 @@
         </div>
 
         <div id="album_index">
-            <a href="http://o9laew41e.bkt.clouddn.com/2013.jpg"><img src="http://o9laew41e.bkt.clouddn.com/2013.jpg" id="img_index" style="max-width: 600px;height: auto;" alt="index_pic"/></a>
+            <a href="albums/index.png"><img src="albums/index.png" id="img_index" style="max-width: 600px;height: auto;" alt="index_pic"/></a>
         </div>
 
         <div id="album_detail">
