@@ -50,10 +50,10 @@
                         $.each(result, function (i, item) {
                             if(i%2 == 0)
                             {
-                                str += "<tr><td> <img src='"+item.url+"' id='img_result'/></td>";
+                                str += "<tr><td> <a href='"+item.url+"'><img src='"+item.url+"' id='img_result'/></a></td>";
                             }
                             else{
-                                str += "<td> <img src='"+item.url+"' id='img_result'/></td></tr>";
+                                str += "<td><a href='"+item.url+"'><img src='"+item.url+"' id='img_result'/></a></td></tr>";
                             }
                         });
                         if(result.length%2 != 0){
