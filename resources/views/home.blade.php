@@ -41,6 +41,10 @@
 
             $("#album a").click(function () {
                 var album_id = $(this).find('input').val();
+                $("#album_index").hide();
+                $("#album_detail").show();
+                $('#contact_content').hide();
+                $("#about_content").hide();
                 $.ajax({
                     type: "GET",  //提交方式
                     dataType: "json",
