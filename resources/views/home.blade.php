@@ -15,6 +15,7 @@
             $("#about_content").hide();
             $("#contact_content").hide();
             $("#album_detail").hide();
+            $("#video_content").hide();
             $('#album_index').show();
 
 
@@ -22,6 +23,7 @@
                 $("#album_index").hide();
                 $('#contact_content').hide();
                 $("#about_content").show();
+                $("#video_content").hide();
                 $("#album_detail").hide();
             });
 
@@ -29,6 +31,15 @@
                 $("#album_index").hide();
                 $('#contact_content').show();
                 $("#about_content").hide();
+                $("#video_content").hide();
+                $("#album_detail").hide();
+            });
+
+            $("#video").click(function () {
+                $("#album_index").hide();
+                $('#contact_content').hide();
+                $("#about_content").hide();
+                $("#video_content").show();
                 $("#album_detail").hide();
             });
 
@@ -36,6 +47,7 @@
                 $("#album_index").hide();
                 $("#album_detail").show();
                 $('#contact_content').hide();
+                $("#video_content").hide();
                 $("#about_content").hide();
             });
 
@@ -44,6 +56,7 @@
                 $("#album_index").hide();
                 $("#album_detail").show();
                 $('#contact_content').hide();
+                $("#video").hide();
                 $("#about_content").hide();
                 $.ajax({
                     type: "GET",  //提交方式
@@ -100,7 +113,10 @@
             min-height: 200px;
             margin-top: 150px;
         }
-
+        #video_content {
+            min-height: 200px;
+            margin-top: 150px;
+        }
         #img_result {
             max-width: 350px;
             height: auto;
@@ -145,8 +161,20 @@
                 </li>
             @endforeach
         </ul>
+        <div style="margin: 30px 40px 30px ;list-style-type: none;font-family: 微软雅黑;">
+            <h5><a href="#" id="video">VIDEO</a></h5>
+        </div>
     </div>
     <div id="content_right">
+        <div id="video_content">
+            <h4>VIDEO</h4>
+            <h4>纪录片《invisible》拍摄于2016年。</h4>
+            <h4>Diamentino Quintas —— 传统胶片洗印师。</h4>
+            <h4>由其负责完成洗印的已故摄影师Gilles Garon摄影作品近期在巴黎网球场博物馆Soulèvement展览展出。</h4>
+            <h4>视频链接 <a href="https://www.youtube.com/watch?v=MY2pslVRluU" target="_blank">https://www.youtube.com/watch?v=MY2pslVRluU</a></h4>
+        </div>
+
+
         <div id="about_content">
             <h4>ABOUT</h4>
 
